@@ -29,10 +29,102 @@ p {
 }
 
 .contact-form {
+  padding-top: 2em;
+  width: auto;
+  height: auto;
   background-color: #f4f4f4;
 }
 .contact-form h2 {
   text-align: center;
+  margin-bottom: 0.5em;
+}
+.contact-form p {
+  width: 80%;
+  text-align: justify;
+  margin: 0 auto;
+}
+.contact-form .form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 80%;
+  margin: 0 auto;
+}
+.contact-form .form-container .form-input {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0 0 0;
+}
+.contact-form .form-container .form-input input {
+  height: 3em;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-size: 1em;
+}
+.contact-form .form-container .form-input .terms-text {
+  margin-right: 1em;
+}
+.contact-form .form-container .form-input .terms {
+  text-decoration: underline;
+}
+.contact-form .form-container .submit-form {
+  width: 100px;
+  height: 48px;
+  background-color: #000;
+  color: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-bottom: 3em;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+.help {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+.help h2 {
+  padding-bottom: 1em;
+}
+.help .quote {
+  text-decoration: underline;
+  padding-bottom: 1em;
+}
+.help .book-appoinment {
+  background-color: #000;
+  color: white;
+  width: 60%;
+  height: 4em;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 /*# sourceMappingURL=globals.css.map */
