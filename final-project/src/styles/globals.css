@@ -98,24 +98,25 @@ p {
   font-size: 1.1em;
 }
 
-.help {
+.container-help {
+  padding: 2em 0 2em 0;
+}
+.container-help .help {
   display: flex;
   flex-direction: column;
   width: 80%;
   border: 1px solid black;
   margin: 0 auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
   padding: 1em;
 }
-.help h2 {
-  padding-bottom: 1em;
+.container-help .help h2 {
+  padding-bottom: 0.5em;
 }
-.help .quote {
+.container-help .help .help-content .quote {
   text-decoration: underline;
   padding-bottom: 1em;
 }
-.help .book-appoinment {
+.container-help .book-appoinment {
   background-color: #000;
   color: white;
   width: 60%;
@@ -125,6 +126,21 @@ p {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+
+@media (min-width: 1200px) {
+  .container-help {
+    background-color: #f4f4f4;
+  }
+  .container-help .help {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container-help .book-appoinment {
+    width: 80%;
+  }
 }
 
 /*# sourceMappingURL=globals.css.map */
