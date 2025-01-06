@@ -13,4 +13,26 @@ p {
   font-size: 1.1em;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+.contact-form {
+  background-color: #f4f4f4;
+}
+.contact-form h2 {
+  text-align: center;
+}
+
 /*# sourceMappingURL=globals.css.map */
