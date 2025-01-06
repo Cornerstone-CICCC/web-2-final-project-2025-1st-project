@@ -1,0 +1,64 @@
+---
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
+const links = [
+  {
+    href: "https://facebook.com",
+    label: "Facebook",
+    icon: FaFacebookF,
+  },
+  {
+    href: "https://instagram.com",
+    label: "Instagram",
+    icon: FaInstagram,
+  },
+  { href: "https://twitter.com", label: "Twitter", icon: FaTwitter },
+  {
+    href: "https://linkedin.com",
+    label: "Linkedin",
+    icon: FaLinkedin,
+  },
+];
+---
+
+<header>
+  <div class="header-top">
+    <div class="contact-info">
+      <p><strong>For emergency cases: 567 123 45 67</strong></p>
+      <p>Location:121 Wallstreet Street, NY , USA</p>
+      <p>Open hours: 9.00-24.00 Mon-Sat</p>
+      <p>Email:info@Ddsgnr.com</p>
+    </div>
+    <ul class="sns-link">
+      {
+        links.map((link) => (
+          <li>
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+              <link.icon size="24" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="header-bottom">
+      <a href="/" class="main-icon">
+        <img src="/main-icon.svg" alt="header icon" />
+        <p><strong>Ddsgnr</strong></p>
+      </a>
+    <div>
+      <nav>
+        <ul class="nav-link">
+          <li><a href="/">Home</a></li>
+          <li><a href="/doctors">Doctors</a></li>
+          <li><a href="/departments">Departments</a></li>
+          <li><a href="/about">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button>Book an Appointment</button>
+  </div>
+</header>
