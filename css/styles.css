@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+.contact-form {
+  background-color: #f4f4f4;
+}
+.contact-form h2 {
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+#doctors {
+  padding: 112px 64px;
+}
+#doctors .title {
+  text-align: center;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+#doctors .title h1 {
+  size: 56px;
+}
+#doctors .title p:first-child {
+  size: 16px;
+}
+#doctors .title p:last-child {
+  size: 18px;
+}
+#doctors .cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 80px;
+}
+#doctors .cards .card {
+  text-align: center;
+  width: 33%;
+}
+#doctors .cards .card img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 24px;
+}
+#doctors .cards .card .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#doctors .cards .card .detail .name {
+  size: 24px;
+  font-weight: bold;
+}
+#doctors .cards .card .detail .section {
+  size: 18px;
+}
+#doctors .cards .card .detail .field {
+  size: 14px;
+}/*# sourceMappingURL=styles.css.map */
