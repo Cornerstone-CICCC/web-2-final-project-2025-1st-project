@@ -1,41 +1,52 @@
 <div class="contact-form">
-    <h2>Conctact Us</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel explicabo omnis quisquam odio.</p>
-    <form action="" id="contact-form">
-        <div class="form-container">
-            <div class="form-input">
-                <label for="user_name">Full Name</label>
-                <input name="user_name" type="text" required>
+    <div class="form-container">
+        <h2>Conctact Us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel explicabo omnis quisquam odio.</p>
+        <form action="" id="contact-form">
+            <div class="form-container">
+                <div class="responsive-form">
+                    <div class="form-input">
+                        <label for="user_name">Full Name</label>
+                        <input name="user_name" type="text" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="user_email">Email</label>
+                        <input type="email" name="user_email" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="user_phone">Phone Number</label>
+                        <input name="user_phone" type="number" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="birth">Date of Birth</label>
+                        <input name="birth" type="date" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="user_service">Select Service</label>
+                        <select name="user_service">
+                            <option value="Cardiology">Cardiology</option>
+                            <option value="Dermatologist">Dermatologist</option>
+                            <option value="Hematologist">Hematologist</option>
+                            <option value="Neurologist">Neurologist</option>
+                            <option value="Oncologist">Oncologist</option>
+                        </select>
+                    </div>
+                    <div class="form-input">
+                        <label for="user_time">Select Time</label>
+                        <input type="time" name="user_time" required>
+                    </div>
+                </div>
+                <div class="form-input">
+                    <label for="message">Message</label>
+                    <textarea name="message" rows="10" id="message"></textarea>
+                </div>
+                <div>
+                    <input type="checkbox" name="terms" required>
+                    <label for="terms" class="terms-text">I accept the <span class="terms">Terms</span></label>
+                </div>
+                <button class="submit-form" value="Send">Submit</button>
             </div>
-            <div class="form-input">
-                <label for="user_email">Email</label>
-                <input type="email" name="user_email" required>
-            </div>
-            <div class="form-input">
-                <label for="user_phone">Phone Number</label>
-                <input name="user_phone" type="number" required>
-            </div>
-            <div class="form-input">
-                <label for="birth">Date of Birth</label>
-                <input name="birth" type="date" required>
-            </div>
-            <div class="form-input">
-                <label for="user_service">Select Service</label>
-                <input name="user_service" type="text" required>
-            </div>
-            <div class="form-input">
-                <label for="user_time">Select Time</label>
-                <input type="time" name="user_time" required>
-            </div>
-            <div class="form-input">
-                <label for="message">Message</label>
-                <textarea name="message" rows="10" cols="10"></textarea>
-            </div>
-            <div>
-                <input type="checkbox" name="terms" required>
-                <label for="terms" class="terms-text">I accept the <span class="terms">Terms</span></label>
-            </div>
-            <button class="submit-form" value="Send">Submit</button>
-        </div>
-    </form>
+        </form>
+    </div>
+    <div class="image-form"></div>
 </div>
