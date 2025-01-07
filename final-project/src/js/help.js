@@ -1,6 +1,5 @@
 // if the window is larger than 1200
 if((window.innerWidth-34) > 1200){
-    console.log(window)
     book()
     if(!document.querySelector(".img-form")){
         image()  
