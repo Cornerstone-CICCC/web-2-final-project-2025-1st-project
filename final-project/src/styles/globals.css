@@ -168,7 +168,9 @@ p {
   }
 }
 .slider {
-  margin: 2em;
+  overflow: hidden;
+  margin: 2em 0;
+  padding: 0.5em 0;
   width: 100%;
   height: auto;
   display: flex;
