@@ -3,6 +3,8 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoIosSearch } from "react-icons/io";
 
 const links = [
   {
@@ -45,10 +47,16 @@ const links = [
     </ul>
   </div>
   <div class="header-bottom">
-      <a href="/" class="main-icon">
-        <img src="/main-icon.svg" alt="header icon" />
-        <p><strong>Ddsgnr</strong></p>
-      </a>
+    <button class="menu-btn" id="menu-btn">
+      <RxHamburgerMenu size="24" />
+    </button>
+    <a href="/" class="main-icon">
+      <img src="/main-icon.svg" alt="header icon" />
+      <p><strong>Ddsgnr</strong></p>
+    </a>
+    <button class="search-btn" id="search-btn">
+      <IoIosSearch size="24" />
+    </button>
     <div>
       <nav>
         <ul class="nav-link">
@@ -59,6 +67,21 @@ const links = [
         </ul>
       </nav>
     </div>
-    <button>Book an Appointment</button>
+    <button class="book-btn">Book an Appointment</button>
+  </div>
+
+  <!-- mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="close-btn" id="close-btn">&times;</button>
+    <nav>
+      <ul class="mobile-nav-link">
+        <li><a href="/">Home</a></li>
+        <li><a href="/doctors">Doctors</a></li>
+        <li><a href="/departments">Departments</a></li>
+        <li><a href="/about">About Us</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
+
+<script src="src/js/mobile-menu.js" type="module"></script>

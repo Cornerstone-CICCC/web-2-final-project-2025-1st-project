@@ -1,8 +1,53 @@
 @import "generals";
 
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+
 .news-letter-section {
-  justify-content: space-between;
-  padding: 3rem;
-  gap: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem;
+  gap: 1rem;
   background-color: $gray;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    display: none;
+  }
+}
+
+.news-letter-form {
+  display: flex;
+  gap: 0.5rem;
+
+  input[type="email"] {
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 4px;
+    width: 250px;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+.terms-text {
+  font-size: 0.875rem;
+  color: #666;
 }
