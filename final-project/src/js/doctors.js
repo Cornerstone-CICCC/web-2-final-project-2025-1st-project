@@ -1,50 +1,29 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.cards .card');
-    const viewMoreButton = document.getElementById('viewMore');
-    
-    // 初期表示の画像数を設定
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll("#doctors .cards .card");
+
     const pcInitialCount = 6;
     const mobileInitialCount = 3;
-    const addCount = 3;
-  
-    let currentCount = 0;
-  
-    // 初期表示数を画面幅で変更
-    const updateInitialCount = () => {
-      const isMobile = window.innerWidth <= 932;
-      currentCount = isMobile ? mobileInitialCount : pcInitialCount;
-  
-      // 画像の初期表示
-      cards.forEach((card, index) => {
-        if (index < currentCount) {
-          card.classList.add('visible');
-        } else {
-          card.classList.remove('visible');
+
+    let previousWidth = window.innerWidth; // 前回の画面幅
+
+    const checkAndUpdate = () => {
+        const currentWidth = window.innerWidth;
+        const isMobile = previousWidth <= 932; // 前回の画面状態
+        const nowMobile = currentWidth <= 932; // 現在の画面状態
+
+        // 画面幅が境界をまたいだ場合にのみ処理を実行
+        if (isMobile !== nowMobile) {
+            updateInitialCount(cards, pcInitialCount, mobileInitialCount);
         }
-      });
+
+        // 現在の幅を次回の比較用に保存
+        previousWidth = currentWidth;
     };
-  
-    // View Moreボタンのクリックイベント
-    viewMoreButton.addEventListener('click', () => {
-      const nextCount = currentCount + addCount;
-  
-      cards.forEach((card, index) => {
-        if (index < nextCount) {
-          card.classList.add('visible');
-        }
-      });
-  
-      currentCount = nextCount;
-  
-      // すべての画像が表示されたらボタンを非表示
-      if (currentCount >= cards.length) {
-        viewMoreButton.style.display = 'none';
-      }
-    });
-  
-    updateInitialCount();
-  
-    // ウィンドウサイズ変更時に初期表示を更新
-    window.addEventListener('resize', updateInitialCount);
-  });
-  
+
+    // リサイズイベントに登録
+    window.addEventListener("resize", checkAndUpdate);
+
+    updateInitialCount(cards, pcInitialCount, mobileInitialCount);
+});
+
+
