@@ -1,0 +1,47 @@
+@import "generals";
+
+.container-help{
+    padding: 2em 0 2em 0;
+    .help{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        border: 1px solid black;
+        margin: 0 auto;
+        padding: 1em;
+        h2{
+            padding-bottom: .5em;
+        }
+        .help-content{
+            .quote{
+                text-decoration: underline;
+                padding-bottom: 1em;
+            }
+        }
+    }
+    .book-appoinment{
+        background-color: $black;
+        color: white;
+        width: 60%;
+        height: 4em;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }    
+}
+@media (min-width: 1200px) {
+    .container-help{
+        background-color: $gray;
+        .help{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .book-appoinment{
+            width: 80%;
+        }
+    }
+}
