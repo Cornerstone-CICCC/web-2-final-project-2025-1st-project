@@ -27,14 +27,14 @@ const links = [
 ---
 
 <header>
-  <div class="header-top">
-    <div class="contact-info">
+  <div class="header__top">
+    <div class="header__top__info">
       <p><strong>For emergency cases: 567 123 45 67</strong></p>
       <p>Location:121 Wallstreet Street, NY , USA</p>
       <p>Open hours: 9.00-24.00 Mon-Sat</p>
       <p>Email:info@Ddsgnr.com</p>
     </div>
-    <ul class="sns-link">
+    <ul class="header__top__sns">
       {
         links.map((link) => (
           <li>
@@ -46,20 +46,20 @@ const links = [
       }
     </ul>
   </div>
-  <div class="header-bottom">
-    <button class="menu-btn" id="menu-btn">
+  <div class="header__bottom">
+    <button class="header__bottom__menu-btn" id="menu-btn">
       <RxHamburgerMenu size="24" />
     </button>
-    <a href="/" class="main-icon">
+    <a href="/" class="header__bottom__brand">
       <img src="/main-icon.svg" alt="header icon" />
       <p><strong>Ddsgnr</strong></p>
     </a>
-    <button class="search-btn" id="search-btn">
+    <button class="header__bottom__search-btn" id="search-btn">
       <IoIosSearch size="24" />
     </button>
-    <div>
+    <div class="header__bottom__links">
       <nav>
-        <ul class="nav-link">
+        <ul class="header__bottom__links__nav">
           <li><a href="/">Home</a></li>
           <li><a href="/doctors">Doctors</a></li>
           <li><a href="/departments">Departments</a></li>
@@ -67,14 +67,14 @@ const links = [
         </ul>
       </nav>
     </div>
-    <button class="book-btn">Book an Appointment</button>
+    <button class="header__bottom__book-btn">Book an Appointment</button>
   </div>
 
   <!-- mobile menu -->
-  <div class="mobile-menu" id="mobile-menu">
-    <button class="close-btn" id="close-btn">&times;</button>
+  <div class="header__mobile-menu" id="mobile-menu">
+    <button class="header__mobile-menu__close-btn" id="close-btn">&times;</button>
     <nav>
-      <ul class="mobile-nav-link">
+      <ul class="header__mobile-menu__nav">
         <li><a href="/">Home</a></li>
         <li><a href="/doctors">Doctors</a></li>
         <li><a href="/departments">Departments</a></li>

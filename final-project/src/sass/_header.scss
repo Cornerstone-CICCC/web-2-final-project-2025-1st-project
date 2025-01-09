@@ -4,41 +4,44 @@ $breakpoint-small: 480px;
 $breakpoint-medium: 768px;
 $breakpoint-large: 1024px;
 
-@mixin flex-center {
+%flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@mixin nav-link-style {
+%nav-link-style {
   color: #000;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
-@mixin button-style {
+%button-style {
   background-color: #000;
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
-@mixin icon-style {
-  display: flex;
-  gap: 0.5rem;
-  font-size: 1.5rem;
-  color: #000;
-  text-decoration: none;
+@mixin hidden {
+  display: none;
 }
 
-header {
-  .header-top {
-    display: flex;
+.header {
+  &__top {
+    @extend %flex-center;
     justify-content: space-between;
     border-bottom: 1px solid #000;
-    padding: 2rem 3rem;
-    align-items: center;
+    padding: 1rem 2rem;
 
     @media (max-width: $breakpoint-large) {
       padding: 0.5rem 1rem;
@@ -46,172 +49,149 @@ header {
     }
 
     @media (max-width: $breakpoint-medium) {
-      display: none;
-    }
-  }
-
-  .contact-info {
-    display: flex;
-    font-size: 0.8rem;
-
-    p {
-      margin: 0;
-      padding: 0.5rem 1rem;
-      border-right: 1px solid #000;
+      @include hidden;
     }
 
-    p:last-child {
-      border-right: none;
-    }
+    &__info {
+      display: flex;
+      font-size: 0.8rem;
 
-    @media (max-width: $breakpoint-large) {
       p {
-        font-size: 0.8rem;
+        margin: 0;
+        padding: 0.5rem 1rem;
+        border-right: 1px solid #000;
+
+        &:last-child {
+          border-right: none;
+        }
       }
     }
-  }
 
-  .sns-link {
-    display: flex;
-    gap: 1rem;
-
-    li {
-      list-style: none;
-    }
-
-    a {
-      color: #000;
-      text-decoration: none;
-    }
-
-    @media (max-width: $breakpoint-large) {
-      display: none;
-    }
-  }
-
-  .header-bottom {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #000;
-    padding: 2rem 3rem;
-    align-items: center;
-
-    @media (max-width: $breakpoint-large) {
-      padding: 0.5rem 1rem;
-    }
-
-    .nav-link {
+    &__sns {
       display: flex;
       gap: 1rem;
 
       li {
         list-style: none;
+
+        a {
+          @extend %nav-link-style;
+          font-size: 1.5rem;
+        }
       }
 
-      a {
-        color: #000;
-        text-decoration: none;
+      @media (max-width: $breakpoint-large) {
+        @include hidden;
       }
-      gap: 2rem;
+    }
+  }
 
-      a {
-        &:hover {
-          opacity: 0.8;
+  &__bottom {
+    @extend %flex-center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #000;
+
+    @media (max-width: $breakpoint-large) {
+      padding: 0.5rem 1rem;
+    }
+
+    &__brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #000;
+      text-decoration: none;
+
+      img {
+        width: 24px;
+      }
+
+      p {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+
+    &__menu-btn,
+    &__search-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      @media (max-width: $breakpoint-medium) {
+        display: block;
+      }
+
+      @media (min-width: $breakpoint-medium) {
+        @include hidden;
+      }
+    }
+
+    &__links {
+      &__nav {
+        display: flex;
+        gap: 2rem;
+
+        li {
+          list-style: none;
+
+          a {
+            @extend %nav-link-style;
+          }
         }
       }
 
       @media (max-width: $breakpoint-medium) {
-        display: none;
+        @include hidden;
       }
     }
 
-    .book-btn {
-      background-color: #000;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+    &__book-btn {
+      @extend %button-style;
 
       @media (max-width: $breakpoint-large) {
-        display: none;
+        @include hidden;
       }
     }
-
-    .menu-btn {
-      display: none;
-
-      @media (max-width: $breakpoint-medium) {
-        display: block;
-        background-color: transparent;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-    }
-
-    .search-btn {
-      display: none;
-
-      @media (max-width: $breakpoint-medium) {
-        display: block;
-        background-color: transparent;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-    }
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-}
-
-.main-icon {
-  display: flex;
-  gap: 0.5rem;
-  font-size: 1.5rem;
-  color: #000;
-  text-decoration: none;
-}
-
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100%;
-  background-color: #fff;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-  z-index: 1000;
-  padding: 1rem;
-
-  &.open {
-    transform: translateX(0);
   }
 
-  .close-btn {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    margin-bottom: 1rem;
-  }
+  &__mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 1rem;
 
-  .mobile-nav-link {
-    list-style: none;
-    padding: 0;
+    &--open {
+      transform: translateX(0);
+    }
 
-    li {
+    &__close-btn {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
       margin-bottom: 1rem;
+    }
 
-      a {
-        text-decoration: none;
-        color: #000;
-        font-size: 1.2rem;
+    &__nav {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 1rem;
+
+        a {
+          @extend %nav-link-style;
+          font-size: 1.2rem;
+        }
       }
     }
   }
