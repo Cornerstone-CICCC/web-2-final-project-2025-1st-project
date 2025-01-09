@@ -1,0 +1,87 @@
+---
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoIosSearch } from "react-icons/io";
+
+const links = [
+  {
+    href: "https://facebook.com",
+    label: "Facebook",
+    icon: FaFacebookF,
+  },
+  {
+    href: "https://instagram.com",
+    label: "Instagram",
+    icon: FaInstagram,
+  },
+  { href: "https://twitter.com", label: "Twitter", icon: FaTwitter },
+  {
+    href: "https://linkedin.com",
+    label: "Linkedin",
+    icon: FaLinkedin,
+  },
+];
+---
+
+<header>
+  <div class="header__top">
+    <div class="header__top__info">
+      <p><strong>For emergency cases: 567 123 45 67</strong></p>
+      <p>Location:121 Wallstreet Street, NY , USA</p>
+      <p>Open hours: 9.00-24.00 Mon-Sat</p>
+      <p>Email:info@Ddsgnr.com</p>
+    </div>
+    <ul class="header__top__sns">
+      {
+        links.map((link) => (
+          <li>
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+              <link.icon size="24" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="header__bottom">
+    <button class="header__bottom__menu-btn" id="menu-btn">
+      <RxHamburgerMenu size="24" />
+    </button>
+    <a href="/" class="header__bottom__brand">
+      <img src="/main-icon.svg" alt="header icon" />
+      <p><strong>Ddsgnr</strong></p>
+    </a>
+    <button class="header__bottom__search-btn" id="search-btn">
+      <IoIosSearch size="24" />
+    </button>
+    <div class="header__bottom__links">
+      <nav>
+        <ul class="header__bottom__links__nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/doctors">Doctors</a></li>
+          <li><a href="/departments">Departments</a></li>
+          <li><a href="/about">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button class="header__bottom__book-btn">Book an Appointment</button>
+  </div>
+
+  <!-- mobile menu -->
+  <div class="header__mobile-menu" id="mobile-menu">
+    <button class="header__mobile-menu__close-btn" id="close-btn">&times;</button>
+    <nav>
+      <ul class="header__mobile-menu__nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/doctors">Doctors</a></li>
+        <li><a href="/departments">Departments</a></li>
+        <li><a href="/about">About Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script src="src/js/mobile-menu.js" type="module"></script>
