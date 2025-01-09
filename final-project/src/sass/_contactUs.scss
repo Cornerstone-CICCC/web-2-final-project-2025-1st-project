@@ -66,7 +66,7 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $breakpoint-large) {
     .contact-form{
         background-color: white;
         display: flex;
