@@ -1,0 +1,141 @@
+@import "generals";
+// Desktop design
+@media (min-width: 932px) {
+    #doctors {
+        padding: 112px 64px;
+        text-align: center;
+        .title {
+            text-align: center;
+            margin-bottom: 80px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+            h1 {
+                font-size: 56px;
+            }
+            p:first-child {
+                font-size: 16px;
+            }
+            p:last-child {
+                font-size: 18px;
+            }
+        }
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            row-gap: 80px;
+            .card.visible {
+                display: block;
+            }
+            .card {
+                text-align: center;
+                width: 33%;
+                display: none;
+                img {
+                    width: 250px;
+                    height: 250px;
+                    margin-bottom: 24px;
+                }
+                .detail {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    .name {
+                        font-size: 24px;
+                        font-weight: 700;
+                    }
+                    .section {
+                        font-size: 18px;
+                        font-weight: 400;
+                    }
+                    .field {
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        button {
+            margin-top: 80px;
+            padding: 12px 24px;
+            border: solid 1px black;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: gray;
+        }
+    }
+}
+// Smartphone design
+@media (max-width: 932px) {
+    #doctors {
+        padding: 48px 24px;
+        text-align: center;
+        .title {
+            text-align: center;
+            margin-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+            h1 {
+                size: 32px;
+            }
+            p:first-child {
+                display: none;
+            }
+            p:last-child {
+                display: none;
+            }
+        }
+        .cards {
+            display: flex;
+            flex-direction: column;
+            row-gap: 32px;
+            .card.visible {
+                display: block;
+            }
+            .card {
+                text-align: center;
+                width: 100%;
+                display: none;
+                img {
+                    width: 250px;
+                    height: 250px;
+                    margin-bottom: 24px;
+                }
+                .detail {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    .name {
+                        font-size: 24px;
+                        font-weight: 700;
+                    }
+                    .section {
+                        font-size: 18px;
+                        font-weight: 400;
+                    }
+                    .field {
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        button {
+            margin-top: 48px;
+            padding: 12px 24px;
+            width: 100%;
+            border: solid 1px black;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: gray;
+        }
+    }
+}
