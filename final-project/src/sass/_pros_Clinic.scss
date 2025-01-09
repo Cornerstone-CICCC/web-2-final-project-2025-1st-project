@@ -1,0 +1,102 @@
+@import "generals";
+
+
+.clinic-section {
+
+  padding: 1rem;
+  text-align: center;
+  background: #efebeb;
+  height: 100%;
+  }
+  
+  .clinic-header h6 {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+  
+  .clinic-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .clinic-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    color: black;
+  }
+  
+  .clinic-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+  }
+  
+  .clinic-info {
+    flex: 1;
+    max-width: 200px;
+  }
+  
+  .clinic-info h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .clinic-info p {
+    color: black;
+    margin-bottom: 3rem;
+  
+  }
+  
+  
+  
+  .clinic-image img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20em;
+    border-radius: 50%;
+  }
+  
+  .clinic-buttons {
+    margin-top: 3rem;
+  }
+  
+  .primary-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-right: 1rem;
+  }
+  
+  .secondary-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: #1f2937;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  @media (max-width: 428px) {
+    .clinic-image{
+      display: none;
+    }
+    .clinic-content{
+      flex-direction: column;
+    }
+    .clinic-buttons{
+      display: flex;
+      scale: .6;
+      gap: 13px;
+      align-items: center;
+      justify-content: center;    }
+  }
