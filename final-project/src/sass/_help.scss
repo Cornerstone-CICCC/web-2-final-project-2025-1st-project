@@ -31,7 +31,7 @@
         -o-border-radius: 10px;
     }    
 }
-@media (min-width: 1200px) {
+@media (min-width: $breakpoint-large) {
     .container-help{
         background-color: $gray;
         .help{

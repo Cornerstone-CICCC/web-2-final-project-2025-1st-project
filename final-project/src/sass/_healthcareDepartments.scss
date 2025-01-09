@@ -1,6 +1,6 @@
 @import "generals";
 // Desktop design
-@media (min-width: 932px) {
+@media (min-width: $breakpoint-large) {
     #healthcare {
         padding: 112px 64px;
         text-align: center;
@@ -87,7 +87,7 @@
     }
 }
 // Smartphone design
-@media (max-width: 932px) {
+@media (max-width: $breakpoint-large) {
     #healthcare {
         padding: 48px 24px;
         text-align: center;
