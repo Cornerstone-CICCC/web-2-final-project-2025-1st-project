@@ -1,5 +1,5 @@
 // if the window is larger than 1200
-if((window.innerWidth-34) > 1200){
+if((window.innerWidth) > 1200){
     book()
     if(!document.querySelector(".img-form")){
         image()  
@@ -32,7 +32,7 @@ function quote(){
 // fucntion to add the image and remove it 
 function image(){
     let cont = document.querySelector(".image-form")
-    if((window.innerWidth-34) < 1200){
+    if((window.innerWidth) < 1200){
         if(document.querySelector(".img-form")){
             document.querySelector(".img-form").remove() 
         }
