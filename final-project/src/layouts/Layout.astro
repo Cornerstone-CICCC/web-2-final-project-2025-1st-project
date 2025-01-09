@@ -56,11 +56,13 @@
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 	<script>
 		import Splide from '@splidejs/splide';
-		var splide = new Splide( '.splide', {
-			type   : 'loop',
-			padding: '5rem',
-		} );
-		splide.mount();
+		if(document.querySelector(".slider")){
+			var splide = new Splide( '.splide', {
+				type   : 'loop',
+				padding: '5rem',
+			} );
+			splide.mount();
+		}
 	</script>
 	
 </html>
