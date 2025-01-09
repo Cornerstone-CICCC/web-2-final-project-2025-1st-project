@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const checkAndUpdate = () => {
     const currentWidth = window.innerWidth;
-    const isMobile = previousWidth <= 932; // 前回の画面状態
-    const nowMobile = currentWidth <= 932; // 現在の画面状態
+    const isMobile = previousWidth <= BREAKPOINT_LARGE; // 前回の画面状態
+    const nowMobile = currentWidth <= BREAKPOINT_LARGE; // 現在の画面状態
 
     // 画面幅が境界をまたいだ場合にのみ処理を実行
     if (isMobile !== nowMobile) {

@@ -43,7 +43,7 @@ function visibleCard(cards, currentCount, addCount, viewMoreButton) {
 }
 
 function updateInitialCount(cards, pcInitialCount, mobileInitialCount) {
-    const isMobile = window.innerWidth <= 932;
+    const isMobile = window.innerWidth <= BREAKPOINT_LARGE;
     const currentCount = isMobile ? mobileInitialCount : pcInitialCount;
     const viewMoreButton = document.querySelectorAll("#viewMore");
 
