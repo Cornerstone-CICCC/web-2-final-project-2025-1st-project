@@ -1,62 +1,62 @@
 ---
 const data = {
-    cards:[
+    cards: [
         {
-            img: '/src/images/doctors/Image1.png',
-            name: 'Dr.	Mazen	E.	Ganim',
-            section: 'MBBS, MS, Mch Urology',
-            field: 'Family Medicine'
+            img: "/src/images/doctors/Image1.png",
+            name: "Dr.	Mazen	E.	Ganim",
+            section: "MBBS, MS, Mch Urology",
+            field: "Family Medicine",
         },
         {
-            img: '/src/images/doctors/Image2.png',
-            name: 'Dr.	Mazen	E.	Ganim',
-            section: 'MBBS, MD, DM Rheumatology',
-            field: 'Pathology'
+            img: "/src/images/doctors/Image2.png",
+            name: "Dr.	Mazen	E.	Ganim",
+            section: "MBBS, MD, DM Rheumatology",
+            field: "Pathology",
         },
         {
-            img: '/src/images/doctors/Image3.png',
-            name: 'Dr.	Howard	D.	Axe',
-            section: 'MBBS, MD Anesthesia',
-            field: 'Obstetrics'
+            img: "/src/images/doctors/Image3.png",
+            name: "Dr.	Howard	D.	Axe",
+            section: "MBBS, MD Anesthesia",
+            field: "Obstetrics",
         },
         {
-            img: '/src/images/doctors/Image4.png',
-            name: 'Dr. Mahsa Rezaei, MD',
-            section: 'MBBS, MD, DM Cardiology',
-            field: 'Emergency Medicine'
+            img: "/src/images/doctors/Image4.png",
+            name: "Dr. Mahsa Rezaei, MD",
+            section: "MBBS, MD, DM Cardiology",
+            field: "Emergency Medicine",
         },
         {
-            img: '/src/images/doctors/Image5.png',
-            name: 'Dr. Dilip Anmangandla, MD',
-            section: 'MBBS, MS Gyne & Obs',
-            field: 'Urology'
+            img: "/src/images/doctors/Image5.png",
+            name: "Dr. Dilip Anmangandla, MD",
+            section: "MBBS, MS Gyne & Obs",
+            field: "Urology",
         },
         {
-            img: '/src/images/doctors/Image6.png',
-            name: 'Dr. Marion Carson, MD',
-            section: 'MBBS, MS, Mch Neurosurgery',
-            field: 'Neurology'
+            img: "/src/images/doctors/Image6.png",
+            name: "Dr. Marion Carson, MD",
+            section: "MBBS, MS, Mch Neurosurgery",
+            field: "Neurology",
         },
         {
-            img: '/src/images/doctors/Image1.png',
-            name: 'Dr.	Mazen	E.	Ganim',
-            section: 'MBBS, MS, Mch Urology',
-            field: 'Family Medicine'
+            img: "/src/images/doctors/Image1.png",
+            name: "Dr.	Mazen	E.	Ganim",
+            section: "MBBS, MS, Mch Urology",
+            field: "Family Medicine",
         },
         {
-            img: '/src/images/doctors/Image2.png',
-            name: 'Dr.	Mazen	E.	Ganim',
-            section: 'MBBS, MD, DM Rheumatology',
-            field: 'Pathology'
+            img: "/src/images/doctors/Image2.png",
+            name: "Dr.	Mazen	E.	Ganim",
+            section: "MBBS, MD, DM Rheumatology",
+            field: "Pathology",
         },
         {
-            img: '/src/images/doctors/Image3.png',
-            name: 'Dr.	Howard	D.	Axe',
-            section: 'MBBS, MD Anesthesia',
-            field: 'Obstetrics'
+            img: "/src/images/doctors/Image3.png",
+            name: "Dr.	Howard	D.	Axe",
+            section: "MBBS, MD Anesthesia",
+            field: "Obstetrics",
         },
-    ]
-}
+    ],
+};
 ---
 
 <div id="doctors">
@@ -66,17 +66,18 @@ const data = {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
     <div class="cards">
-        {data.cards.map((card) => (
-            <div class="card">
-                <img src={card.img} alt="doctor img">
-                <div class="detail">
-                    <div class="name">{card.name}</div>
-                    <div class="section">{card.section}</div>
-                    <div class="field">{card.field}</div>
+        {
+            data.cards.map((card) => (
+                <div class="card">
+                    <img src={card.img} alt="doctor img" />
+                    <div class="detail">
+                        <div class="name">{card.name}</div>
+                        <div class="section">{card.section}</div>
+                        <div class="field">{card.field}</div>
+                    </div>
                 </div>
-            </div>
-            )
-        )}
+            ))
+        }
     </div>
 
     <button id="viewMore" onclick="viewMore('doctor')">View More</button>
