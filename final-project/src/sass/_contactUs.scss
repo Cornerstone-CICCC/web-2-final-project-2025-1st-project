@@ -80,6 +80,12 @@
         }
         .image-form{
             margin-right: 1.5em;
+            .img-form {
+                min-width: 100%;
+                min-height: 90%;
+                width: 100%;
+                height: auto;
+            }              
         }
     }
 }
