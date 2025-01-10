@@ -1,4 +1,4 @@
-//
+// Sass Variables
 *{
     box-sizing: border-box;
     font-family: "Roboto", serif;
@@ -13,6 +13,11 @@ h2{
 p{
     font-size: 1.1em;
 }
+
+// breakpoints
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
 
 // colors
 $gray: #f4f4f4;

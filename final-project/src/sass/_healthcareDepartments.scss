@@ -1,0 +1,173 @@
+@import "generals";
+// Desktop design
+@media (min-width: $breakpoint-large) {
+    #healthcare {
+        padding: 112px 64px;
+        text-align: center;
+        background-color: #F4F4F4;
+        .title {
+            text-align: center;
+            margin-bottom: 80px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+            h1 {
+                font-size: 56px;
+            }
+            p:first-child {
+                font-size: 16px;
+            }
+            p:last-child {
+                font-size: 18px;
+            }
+        }
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            row-gap: 64px;
+            column-gap: 5%;
+            .card.visible {
+                display: block;
+            }
+            .card {
+                padding: 24px 16px;
+                background-color: white;
+                text-align: center;
+                width: 21%;
+                display: none;
+                .docImg {
+                    padding: 10px;
+                    width: 72px;
+                    height: auto;
+                    margin-bottom: 24px;
+                }
+                .detail {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    .field {
+                        margin-bottom: 16px;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    .text {
+                        margin-bottom: 16px;
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+                .more {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    p {
+                        font-size: 16px;
+                    }
+                    img {
+                        width: 24px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        button {
+            margin-top: 80px;
+            padding: 12px 24px;
+            border: solid 1px black;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: gray;
+        }
+    }
+}
+// Smartphone design
+@media (max-width: $breakpoint-large) {
+    #healthcare {
+        padding: 48px 24px;
+        text-align: center;
+        .title {
+            text-align: center;
+            margin-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+            h1 {
+                size: 32px;
+            }
+            p:first-child {
+                display: none;
+            }
+            p:last-child {
+                display: none;
+            }
+        }
+        .cards {
+            display: flex;
+            flex-direction: column;
+            row-gap: 32px;
+            .card.visible {
+                display: block;
+            }
+            .card {
+                text-align: center;
+                width: 100%;
+                display: none;
+                background-color: #F4F4F4;
+                padding: 16px 15%;
+                .docImg {
+                    padding: 10px;
+                    width: 72px;
+                    height: auto;
+                    margin-bottom: 24px;
+                }
+                .detail {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    .field {
+                        margin-bottom: 16px;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    .text {
+                        margin-bottom: 16px;
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+                .more {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    p {
+                        font-size: 16px;
+                    }
+                    img {
+                        width: 24px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        button {
+            margin-top: 48px;
+            padding: 12px 24px;
+            width: 100%;
+            border: solid 1px black;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: gray;
+        }
+    }
+}
