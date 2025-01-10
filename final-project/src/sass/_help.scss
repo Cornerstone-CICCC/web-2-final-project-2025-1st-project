@@ -11,15 +11,20 @@
         padding: 1em;
         h2{
             padding-bottom: .5em;
+            font-size: 1.5em;
         }
         .help-content{
-            .quote{
-                text-decoration: underline;
-                padding-bottom: 1em;
+            .quote-container{
+                margin-top: 1em;
+                .quote{
+                    color: $black;
+                    text-decoration: underline;
+                }
             }
         }
     }
     .book-appoinment{
+        margin-top: 1em;
         background-color: $black;
         color: white;
         width: 60%;
@@ -39,9 +44,26 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            h2{
+                font-size: 2em;
+            }
+            .quote-container{
+                .quote{
+                    text-decoration: underline;
+                    padding-bottom: 1em;
+                    &:hover{
+                        color:deepskyblue ;
+                    }
+                }
+            }
         }
         .book-appoinment{
             width: 80%;
+            &:hover{
+                color: $black;
+                background-color: white;
+                cursor: pointer;
+            }
         }
     }
 }

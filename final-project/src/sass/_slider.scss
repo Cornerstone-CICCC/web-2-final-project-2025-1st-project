@@ -1,5 +1,9 @@
+@import "generals";
+#splide{
+    display: none;
+}
+
 .slider{
-    overflow: hidden;
     margin: 2em 0;
     padding: .5em 0;
     width: 100%;
@@ -40,5 +44,11 @@
                 font-weight: bold;
             }
         }
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    #splide{
+        display: block;
     }
 }

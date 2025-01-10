@@ -17,8 +17,13 @@ window.onload = function() {
             .then(() => {
                 // usage https://apvarun.github.io/toastify-js/#
                 Toastify({
-                    text: "Mail sent",
+                    text: "Thanks for reaching out",
                     duration: 3000
+                    }).showToast();
+                
+                Toastify({
+                    text: "We will contact you soon",
+                    duration: 4000
                     }).showToast();
                 document.getElementById('contact-form').reset()
             }, (error) => {
