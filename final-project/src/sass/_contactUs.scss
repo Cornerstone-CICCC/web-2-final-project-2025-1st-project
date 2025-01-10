@@ -1,5 +1,6 @@
 @import "generals";
 
+
 .contact-form{
     padding-top: 2em;
     width: auto;
@@ -28,7 +29,7 @@
             flex-direction: column;
             margin: 1em 0 0 0;
             input,select{
-                border: 1px solid $black;
+                border: 2px solid $black;
                 padding-left: 1em;
                 height: 3em;
                 border-radius: 5px;
@@ -43,11 +44,12 @@
             }
         }
         .terms{
-            text-decoration: underline;
+            color: black;
         }
         #message{
+            cursor: pointer;
             margin: .4em;
-            border: 1px solid $black;
+            border: 2px solid $black;
             padding: 1em;
             font-size: 1.2em;
         }
@@ -89,6 +91,20 @@
                 max-height: 90%;
                 height: 100%;
             }              
+        }
+        input,select:hover{
+            cursor: pointer;
+        }
+        .terms:hover{
+            color: deepskyblue;
+            cursor: pointer;
+        }
+        .submit-form{
+            &:hover{
+                color: black;
+                background-color: white;
+                cursor: pointer;
+            }
         }
     }
 }
