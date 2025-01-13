@@ -1,96 +1,129 @@
 @import "variables";
 
-.clinic_layout{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    .clinic_bg{
-      display: none;
-      .clinic_image_desktop{
-        width: 34em;
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-      }
-    }
-  }
-  .clinic_box{
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: space-between;
-    margin: 1em;
-    flex-direction: column;
-    .about {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      max-width: 600px;
-      h2 {
-        font-size: 1.6em;
-      }
-    }
-  }
-
-  .clinic_btn {
-    margin-top: 1rem;
-    height: auto;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    .clinic_appointment{
-      width: 100%;
-      margin-top: 1em;
-      padding: 0.75rem 1.5rem;
-      background-color: black;
-      border: 1px solid black;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      border-radius: 5px;
-    }
-  }
-
-  .doc_clinic{
-    margin-top: 3em;
-    display: block;
-    .doc_img_clinic{
-      max-width: 100%;
-      width: 100%;
-    }
-  }
-
 @media (min-width: $breakpoint-large) {
-  .doc_clinic{
-    display: none;
-  }
-  .clinic_layout{
-    .clinic_box{
-      flex-direction: row;
-      .about{
-        h2{
-          font-size: 2.1em;
-        }
-        .clinic_btn{
-            .clinic_appointment:hover{
-              color: $black;
-              background-color: white;
-              border: 1px solid black;
+    .clinic_layout {
+        padding: 112px 64px;
+        display: flex;
+        align-items: center;
+        column-gap: 80px;
+        .about {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 50%;
+            h5 {
+                font-size: 16px;
+                font-weight: 600;
             }
+            h2 {
+                font-size: 48px;
+                font-weight: 700;
+            }
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 27px;
+            }
+            .clinic_btn {
+              margin-top: 32px;
+              height: auto;
+              width: 30%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .clinic_appointment {
+                  width: 100%;
+                  padding: 0.75rem 1.5rem;
+                  background-color: black;
+                  border: 1px solid black;
+                  color: white;
+                  border: none;
+                  cursor: pointer;
+                  font-size: 1rem;
+                  border-radius: 5px;
+              }
+              .clinic_appointment:hover {
+                  color: $black;
+                  background-color: white;
+                  border: 1px solid black;
+              }
+          }
+        }
+        .clinic_bg {
+          width: 50%;
+          .clinic_image_desktop {
+              width: 100%;
+              border-radius: 50%;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              -ms-border-radius: 50%;
+              -o-border-radius: 50%;
           }
       }
+        .doc_clinic {
+            display: none;
+        }
     }
-    .clinic_bg{
-      display: block;
-    }
-  }
 }
-
-
-
-
+@media (max-width: $breakpoint-large) {
+    .clinic_layout {
+        padding: 48px 24px;
+        display: flex;
+        flex-direction: column;
+        // column-gap: 80px;
+        .about {
+            display: flex;
+            flex-direction: column;
+            // column-gap: 32px;
+            width: 100%;
+            h5 {
+                padding-bottom: 32px; // doesn't work gap
+                font-size: 16px;
+                font-weight: 600;
+            }
+            h2 {
+                padding-bottom: 32px; // doesn't work gap
+                font-size: 32px;
+                font-weight: 700;
+            }
+            p {
+                font-size: 18px;
+                font-weight: 400;
+            }
+            .clinic_btn {
+                margin-top: 32px;
+                height: auto;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .clinic_appointment {
+                    width: 100%;
+                    padding: 0.75rem 1.5rem;
+                    background-color: black;
+                    border: 1px solid black;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 1rem;
+                    border-radius: 5px;
+                }
+                .clinic_appointment:hover {
+                    color: $black;
+                    background-color: white;
+                    border: 1px solid black;
+                }
+            }
+        }
+        .doc_clinic {
+            margin-top: 80px; // doesn't work gap
+            width: 100%;
+            .doc_img_clinic {
+                width: 100%;
+            }
+        }
+        .clinic_bg {
+            display: none;
+        }
+    }
+}
