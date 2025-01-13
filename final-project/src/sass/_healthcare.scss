@@ -74,7 +74,7 @@
   }
 }
 
-@media (max-width: 428px) {
+@media (max-width: $breakpoint-large) {
   .hero {
     padding: 1rem;
   }
