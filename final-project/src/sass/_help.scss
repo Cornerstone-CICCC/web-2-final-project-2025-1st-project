@@ -1,0 +1,69 @@
+@import "variables";
+
+.container-help{
+    padding: 2em 0 2em 0;
+    .help{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        border: 1px solid black;
+        margin: 0 auto;
+        padding: 1em;
+        h2{
+            padding-bottom: .5em;
+            font-size: 1.5em;
+        }
+        .help-content{
+            .quote-container{
+                margin-top: 1em;
+                .quote{
+                    color: $black;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .book-appoinment{
+        margin-top: 1em;
+        background-color: $black;
+        color: white;
+        width: 60%;
+        height: 4em;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }    
+}
+@media (min-width: $breakpoint-large) {
+    .container-help{
+        background-color: $gray;
+        .help{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            h2{
+                font-size: 2em;
+            }
+            .quote-container{
+                .quote{
+                    text-decoration: underline;
+                    padding-bottom: 1em;
+                    &:hover{
+                        color:deepskyblue ;
+                    }
+                }
+            }
+        }
+        .book-appoinment{
+            width: 80%;
+            &:hover{
+                color: $black;
+                background-color: white;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,196 @@
+@import "variables";
+
+
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%nav-link-style {
+  color: #000;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+%button-style {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+@mixin hidden {
+  display: none;
+}
+
+.header {
+  &__top {
+    @extend %flex-center;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    padding: 1rem 2rem;
+
+    @media (max-width: $breakpoint-large) {
+      padding: 0.5rem 1rem;
+      justify-content: center;
+    }
+
+    @media (max-width: $breakpoint-medium) {
+      @include hidden;
+    }
+
+    &__info {
+      display: flex;
+      font-size: 0.8rem;
+
+      p {
+        margin: 0;
+        padding: 0.5rem 1rem;
+        border-right: 1px solid #000;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+
+    &__sns {
+      display: flex;
+      gap: 1rem;
+
+      li {
+        list-style: none;
+
+        a {
+          @extend %nav-link-style;
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: $breakpoint-large) {
+        @include hidden;
+      }
+    }
+  }
+
+  &__bottom {
+    @extend %flex-center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #000;
+
+    @media (max-width: $breakpoint-large) {
+      padding: 0.5rem 1rem;
+    }
+
+    &__brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #000;
+      text-decoration: none;
+
+      img {
+        width: 24px;
+      }
+
+      p {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+
+    &__menu-btn,
+    &__search-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      @media (max-width: $breakpoint-medium) {
+        display: block;
+      }
+
+      @media (min-width: $breakpoint-medium) {
+        @include hidden;
+      }
+    }
+
+    &__links {
+      &__nav {
+        display: flex;
+        gap: 2rem;
+
+        li {
+          list-style: none;
+
+          a {
+            @extend %nav-link-style;
+          }
+        }
+      }
+
+      @media (max-width: $breakpoint-medium) {
+        @include hidden;
+      }
+    }
+
+    &__book-btn {
+      @extend %button-style;
+
+      @media (max-width: $breakpoint-large) {
+        @include hidden;
+      }
+    }
+  }
+
+  &__mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 1rem;
+
+    &--open {
+      transform: translateX(0);
+    }
+
+    &__close-btn {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    &__nav {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 1rem;
+
+        a {
+          @extend %nav-link-style;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

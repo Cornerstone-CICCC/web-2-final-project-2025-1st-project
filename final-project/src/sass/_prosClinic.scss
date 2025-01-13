@@ -1,0 +1,117 @@
+@import "variables";
+
+.clinic-section {
+  padding: 3em 0;
+  text-align: center;
+  background: #efebeb;
+  height: 100%;
+}
+
+.clinic-header h6 {
+  font-size: 0.875em;
+  color: #6b7280;
+  margin-bottom: 0.5em;
+}
+
+.clinic-header h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.clinic-header p {
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  color: black;
+}
+
+.clinic-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.clinic-info {
+  flex: 1;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.clinic-info h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.clinic-info p {
+  color: black;
+  margin-bottom: 3rem;
+}
+
+.clinic-image img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28em;
+  border-radius: 50%;
+}
+
+.clinic-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+
+.primary-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+  &:hover{
+    color: white;
+    background-color: $black;
+  }
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #1f2937;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &:hover{
+    color: darkblue;
+  }
+}
+
+@media (max-width: $breakpoint-large) {
+  .clinic-section{
+    background-color: white;
+  }
+  .clinic-image {
+    display: none;
+  }
+  .clinic-content {
+    flex-direction: column;
+  }
+  .clinic-buttons {
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
